@@ -34,17 +34,36 @@
     <div class="bg-gray-100 text-center p-10">
       <h1 class="text-4xl font-normal">Desain Undangan Video</h1>
       <span class="font-light">Desain Undangan video lengkap kami untuk memenuhi kebutuhan wedding anda</span>
-      <div class="grid md:grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4 p-5">
-        <card judul="testing" link="lihat" img="https://inveet.s3.ap-southeast-1.amazonaws.com/preview/new/Elegant_Green.jpg"></card>
-        <card judul="testing" link="lihat" img="https://inveet.s3.ap-southeast-1.amazonaws.com/preview/new/Elegant_Green.jpg"></card>
-        <card judul="testing" link="lihat" img="https://inveet.s3.ap-southeast-1.amazonaws.com/preview/new/Elegant_Green.jpg"></card>
-        <card judul="testing" link="lihat" img="https://inveet.s3.ap-southeast-1.amazonaws.com/preview/new/Elegant_Green.jpg"></card>
-        <card judul="testing" link="lihat" img="https://inveet.s3.ap-southeast-1.amazonaws.com/preview/new/Elegant_Green.jpg"></card>
-        <card judul="testing" link="lihat" img="https://inveet.s3.ap-southeast-1.amazonaws.com/preview/new/Elegant_Green.jpg"></card>
+      <div class="grid md:grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4 p-5 content-center justify-center w-full">
+        <card v-for="(js,index) in item" :key="index" :tourl="js.url" :judul="js.judul" link="lihat" img="https://inveet.s3.ap-southeast-1.amazonaws.com/preview/new/Elegant_Green.jpg"></card>
       </div>
+      <div class="w-full p-4 bg-blue-500 rounded-md shadow-md text-center text-white hover:bg-blue-300 px-10"><router-link class="w-full" to="/">Lihat Desain Lainnya</router-link></div>
     </div>
-
+        
 </template>
 
 <script>
+import axios from 'axios'
+export default {
+  setup() {
+    
+  },
+  data() {
+    return {
+      item : []
+    }
+  },
+  created(){
+    this.getUdanganvideo()
+  },
+  methods: {
+    getUdanganvideo() {
+      axios.get("https://mocki.io/v1/7a66e59a-e969-4b42-93a1-f49d046f516d")
+      .then(Response =>{
+        this.item = Response.data;
+        console.log(Response);
+      })
+    }
+  },
+}
 </script>

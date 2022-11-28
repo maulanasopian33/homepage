@@ -8,7 +8,7 @@
             <!-- Nav Links -->
             <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
             <li><router-link class="hover:text-gray-200" to="/">Home</router-link></li>
-            <li><router-link class="hover:text-gray-200" to="/test">Produk</router-link></li>
+            <li><router-link class="hover:text-gray-200" to="/home">Produk</router-link></li>
             <li><a class="hover:text-gray-200" href="#">Harga</a></li>
             <li><a class="hover:text-gray-200" href="#">WA sender</a></li>
             <li><a class="hover:text-gray-200" href="#">Contact Us</a></li>

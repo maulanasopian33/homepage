@@ -1,5 +1,5 @@
 <template>
-    <div class="flex lg:m-20 m-3 w-screen items-center justify-center">
+    <div class="flex lg:m-20 mt-20 m-4 w-screen items-center justify-center">
         <section class="flex flex-wrap items-center -mx-3 font-sans px-4 mx-auto w-full lg:max-w-screen-lg sm:max-w-screen-sm md:max-w-screen-md pb-20">
         <!-- Column-1 -->
         <div class="px-3 w-full md:w-1/2">

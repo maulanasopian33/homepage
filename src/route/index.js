@@ -7,7 +7,7 @@ const routes = [
         component : dashboard
     },
     {
-        path:'/test',
+        path:'/home',
         component: test
     }
 ]
